@@ -1,9 +1,9 @@
 public class GuitarSpec {
     private Builder builder;
     private String model;
-    private Type type;
-    private Wood backWood;
-    private Wood topWood;
+    private Type type; // this is the new enum Type that we created 
+    private Wood backWood; // this is the new enum wood what we created 
+    private Wood topWood; // new wood enum for Type of wood used for the top of the guitar 
     
     // Constructor
     public GuitarSpec(Builder builder, String model, Type type, Wood backWood, Wood topWood) {

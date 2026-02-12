@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+import java.util.LinkedList; // impoting LinkedList class for storing guitars in inventory
 
 public class Inventory {
     private LinkedList<Guitar> guitarList;
@@ -34,7 +34,7 @@ public class Inventory {
         System.out.println(": End");
     }
     
-    // NEW: Search takes GuitarSpec and returns matching guitars
+    // Search takes GuitarSpec and returns matching guitars
     public LinkedList<Guitar> search(GuitarSpec searchSpec) {
         LinkedList<Guitar> matchingGuitars = new LinkedList<Guitar>();
         
@@ -91,7 +91,7 @@ public class Inventory {
     }
     
     
-    /*ARCHIVED CODE FROM STEPS 1-3
+    /* CODE FROM STEPS 1,2,3 
      
         * OLD addGuitar method:
       
@@ -136,5 +136,5 @@ public class Inventory {
         return matchingGuitars;
     }
     
-     END OF ARCHIVED CODE *******/
+     */
 }
