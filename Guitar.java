@@ -1,4 +1,3 @@
-
 public class Guitar {
 	private String serialNumber; 
 	private double price;
