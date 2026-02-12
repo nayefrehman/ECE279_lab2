@@ -1,16 +1,16 @@
 public class Guitar {
 	private String serialNumber; 
 	private double price;
-	private String builder; 
+	private Builder builder;  // CHANGED: String → Builder enum
 	private String model; 
-	private String type;
-	private String backWood;
-	private String topWood;
+	private Type type;        // CHANGED: String → Type enum
+	private Wood backWood;    // CHANGED: String → Wood enum
+	private Wood topWood;     // CHANGED: String → Wood enum
 	
-	public Guitar(String builder, String model, 
-			String type, String topWood, String backWood){
-		this.serialNumber="";
-		this.price=0.0;
+	// Constructor 1: For searching (no serial number or price)
+	public Guitar(Builder builder, String model, Type type, Wood topWood, Wood backWood) {
+		this.serialNumber = "";
+		this.price = 0.0;
 		
 		this.builder = builder;
 		this.model = model;
@@ -19,8 +19,9 @@ public class Guitar {
 		this.backWood = backWood;
 	}
 	
-	public Guitar(String serialNo, double priceSet, String builder, String model, 
-							String type, String topWood, String backWood) {
+	// Constructor 2: For adding guitars to inventory (with serial and price)
+	public Guitar(String serialNo, double priceSet, Builder builder, String model, 
+	              Type type, Wood topWood, Wood backWood) {
 		this.builder = builder;
 		this.model = model;
 		this.type = type;
@@ -32,48 +33,46 @@ public class Guitar {
 	}
 	
 	private void setSerialNumber(String serialNo) {
-		if (serialNo != null && !serialNo.isEmpty()){
+		if (serialNo != null && !serialNo.isEmpty()) {
 			this.serialNumber = serialNo;
 		}
 	}
-	private void setPrice(double priceSet){
-		// check if price is negative before inserting, ensure the priceSet is positive before inserting 
-		if(priceSet >= 0){
+	
+	private void setPrice(double priceSet) {
+		if (priceSet >= 0) {
 			this.price = priceSet;
 		} 
 	}
 	
 	public String getSerialNumber() {
 		return this.serialNumber;
-
 	}
+	
 	public double getPrice() {
-		return price;
+		return this.price;
 	}
-
-	public String getBuilder() {
+	
+	// CHANGED: Return Builder enum instead of String
+	public Builder getBuilder() {
 		return this.builder;
-
 	}
 	
 	public String getModel() {
 		return this.model;
-
-	}
-
-	public String getType() {
-		return this.type;
-
-	}
-	public String getBackWood() {
-		return this.backWood;
-
-	}
-
-	public String getTopWood() {
-		return this.topWood;
-
 	}
 	
+	// CHANGED: Return Type enum instead of String
+	public Type getType() {
+		return this.type;
+	}
+	
+	// CHANGED: Return Wood enum instead of String
+	public Wood getBackWood() {
+		return this.backWood;
+	}
+	
+	// CHANGED: Return Wood enum instead of String
+	public Wood getTopWood() {
+		return this.topWood;
+	}
 }
-
