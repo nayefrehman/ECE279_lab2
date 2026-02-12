@@ -91,10 +91,10 @@ public class Inventory {
     }
     
     
-    /******************** ARCHIVED CODE FROM STEPS 1-3 ********************
-     * 
-     * OLD addGuitar method:
-     * 
+    /*ARCHIVED CODE FROM STEPS 1-3
+     
+        * OLD addGuitar method:
+      
     public void addGuitar(String serialNo, double priceSet, Builder builder, String model, 
                           Type type, Wood topWood, Wood backWood) {
         Guitar guitarObj = new Guitar(serialNo, priceSet, builder, model, type, topWood, backWood);
@@ -136,5 +136,5 @@ public class Inventory {
         return matchingGuitars;
     }
     
-     ******************** END OF ARCHIVED CODE ********************/
+     END OF ARCHIVED CODE *******/
 }
